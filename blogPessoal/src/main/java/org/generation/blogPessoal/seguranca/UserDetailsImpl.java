@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 public class UserDetailsImpl implements UserDetails{
 
-	private static final long serialVersionUID = 1L; //controle interno
+	private static final long serialVersionUID = 1L; //controle interno, vai serializar a classe
 	
 	private String username;
 	private String password;
