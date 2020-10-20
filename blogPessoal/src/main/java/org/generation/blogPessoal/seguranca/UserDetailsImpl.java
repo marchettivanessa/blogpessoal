@@ -14,7 +14,7 @@ public class UserDetailsImpl implements UserDetails{
 	private String password;
 	
 	public UserDetailsImpl(Usuario user) {
-		this.username = user.getSenha();
+		this.username = user.getUsuario();
 		this.password = user.getSenha();
 	}
 	

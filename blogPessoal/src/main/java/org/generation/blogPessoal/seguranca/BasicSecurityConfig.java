@@ -15,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class BasicSecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Autowired
-	private UserDetailsService userDetailsService;
+	private UserDetailsService userDetailsService; //é um objeto do tipo UserDetailsService da classe WebSecurityConfigurerAdapter
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
@@ -28,7 +28,8 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter{
 	}
 	
 	@Override //libera alguns caminhos do controller para que o client tenha acesso sem usar um token
-	protected void configure(HttpSecurity http) throws Exception{
+	protected void configure(HttpSecurity http) throws Exception
+	{
 		http.authorizeRequests()
 		.antMatchers("/usuarios/logar").permitAll()
 		.antMatchers("/usuarios/cadastrar").permitAll()
